@@ -12,6 +12,7 @@
 		E72E46A51B291AB400E7338A /* Save.m in Sources */ = {isa = PBXBuildFile; fileRef = E72E46A41B291AB400E7338A /* Save.m */; };
 		E73C8D011B21E5A30086E6A8 /* savedBookDict.plist in Resources */ = {isa = PBXBuildFile; fileRef = E73C8D001B21E5A30086E6A8 /* savedBookDict.plist */; };
 		E73C8D041B22070E0086E6A8 /* SavedListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E73C8D031B22070E0086E6A8 /* SavedListTableViewController.m */; };
+		E779BE8C1B667CFF00F2EE47 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = E779BE8B1B667CFF00F2EE47 /* Reachability.m */; };
 		E781FCDF1B1CDCD000020DD3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E781FCDE1B1CDCD000020DD3 /* main.m */; };
 		E781FCE21B1CDCD000020DD3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E781FCE11B1CDCD000020DD3 /* AppDelegate.m */; };
 		E781FCEB1B1CDCD000020DD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E781FCE91B1CDCD000020DD3 /* Main.storyboard */; };
@@ -23,7 +24,6 @@
 		E781FD101B1CEB8400020DD3 /* BookDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E781FD0F1B1CEB8400020DD3 /* BookDetailViewController.m */; };
 		E781FD131B1CEBAA00020DD3 /* ResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E781FD121B1CEBAA00020DD3 /* ResultTableViewController.m */; };
 		E781FD161B1CEBD500020DD3 /* Result.m in Sources */ = {isa = PBXBuildFile; fileRef = E781FD151B1CEBD500020DD3 /* Result.m */; };
-		E7BFD4251B56D24F00BCB98E /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BFD4241B56D24F00BCB98E /* Reachability.m */; };
 		E7DCECFA1B3C789F000D12A5 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DCECF51B3C789F000D12A5 /* TFHpple.m */; };
 		E7DCECFB1B3C789F000D12A5 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DCECF71B3C789F000D12A5 /* TFHppleElement.m */; };
 		E7DCECFC1B3C789F000D12A5 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DCECF91B3C789F000D12A5 /* XPathQuery.m */; };
@@ -53,6 +53,8 @@
 		E76943581B3AF6600024792C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		E769435A1B3AF6710024792C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		E769435C1B3AF6910024792C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		E779BE8B1B667CFF00F2EE47 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		E779BE8D1B667D0900F2EE47 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		E781FCD91B1CDCD000020DD3 /* LibraryBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LibraryBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E781FCDD1B1CDCD000020DD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E781FCDE1B1CDCD000020DD3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -74,8 +76,6 @@
 		E781FD121B1CEBAA00020DD3 /* ResultTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultTableViewController.m; sourceTree = "<group>"; };
 		E781FD141B1CEBD500020DD3 /* Result.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Result.h; sourceTree = "<group>"; };
 		E781FD151B1CEBD500020DD3 /* Result.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Result.m; sourceTree = "<group>"; };
-		E7BFD4231B56D24F00BCB98E /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = ../../../../Downloads/Reachability/Reachability/Reachability.h; sourceTree = "<group>"; };
-		E7BFD4241B56D24F00BCB98E /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = ../../../../Downloads/Reachability/Reachability/Reachability.m; sourceTree = "<group>"; };
 		E7DCECF41B3C789F000D12A5 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
 		E7DCECF51B3C789F000D12A5 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
 		E7DCECF61B3C789F000D12A5 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
@@ -129,8 +129,8 @@
 		E781FCDB1B1CDCD000020DD3 /* LibraryBooks */ = {
 			isa = PBXGroup;
 			children = (
-				E7BFD4231B56D24F00BCB98E /* Reachability.h */,
-				E7BFD4241B56D24F00BCB98E /* Reachability.m */,
+				E779BE8D1B667D0900F2EE47 /* Reachability.h */,
+				E779BE8B1B667CFF00F2EE47 /* Reachability.m */,
 				E7DCECF31B3C77C7000D12A5 /* hpple */,
 				E781FCE01B1CDCD000020DD3 /* AppDelegate.h */,
 				E781FCE11B1CDCD000020DD3 /* AppDelegate.m */,
@@ -306,7 +306,7 @@
 				E7097A081B432B330062007C /* webViewController.m in Sources */,
 				E72E46A51B291AB400E7338A /* Save.m in Sources */,
 				E72E46A21B27551F00E7338A /* Search.m in Sources */,
-				E7BFD4251B56D24F00BCB98E /* Reachability.m in Sources */,
+				E779BE8C1B667CFF00F2EE47 /* Reachability.m in Sources */,
 				E781FCE21B1CDCD000020DD3 /* AppDelegate.m in Sources */,
 				E781FD101B1CEB8400020DD3 /* BookDetailViewController.m in Sources */,
 				E781FD0A1B1CEB5000020DD3 /* ScanViewController.m in Sources */,
@@ -460,7 +460,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
 				INFOPLIST_FILE = LibraryBooks/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -480,7 +480,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
 				INFOPLIST_FILE = LibraryBooks/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
