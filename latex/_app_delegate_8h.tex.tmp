@@ -1,0 +1,12 @@
+\hypertarget{_app_delegate_8h}{}\section{Library\+Books/\+App\+Delegate.h File Reference}
+\label{_app_delegate_8h}\index{Library\+Books/\+App\+Delegate.\+h@{Library\+Books/\+App\+Delegate.\+h}}
+{\ttfamily \#import $<$U\+I\+Kit/\+U\+I\+Kit.\+h$>$}\\*
+Include dependency graph for App\+Delegate.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{interface_app_delegate}{App\+Delegate}
+\end{DoxyCompactItemize}

@@ -1,0 +1,13 @@
+var searchData=
+[
+  ['parent',['parent',['../interface_t_f_hpple_element.html#a8fc33c0ff70941d9638f05632ad6ba5d',1,'TFHppleElement::parent()'],['../category_t_f_hpple_element_07_08.html#ac7602bad8a05294a6beecabe01e6e569',1,'TFHppleElement()::parent()'],['../category_t_f_hpple_element_07_08.html#a3a570a7692ac21f8d4adc52b4c96756c',1,'TFHppleElement()::parent()']]],
+  ['parser',['parser',['../interface_search.html#a8e7108974b7159d08459abf52e203827',1,'Search']]],
+  ['peekatsearchwithxpathquery_3a',['peekAtSearchWithXPathQuery:',['../interface_t_f_hpple.html#abe341e921def7fa82a96ed265ce2fd4e',1,'TFHpple']]],
+  ['performhtmlxpathquery',['PerformHTMLXPathQuery',['../_x_path_query_8h.html#a1280e9da9886a0d8d1d72a9665d599a9',1,'PerformHTMLXPathQuery(NSData *document, NSString *query):&#160;XPathQuery.m'],['../_x_path_query_8m.html#a1280e9da9886a0d8d1d72a9665d599a9',1,'PerformHTMLXPathQuery(NSData *document, NSString *query):&#160;XPathQuery.m']]],
+  ['performhtmlxpathquerywithencoding',['PerformHTMLXPathQueryWithEncoding',['../_x_path_query_8h.html#a0955d09455324bebcb72f4c804b12f15',1,'PerformHTMLXPathQueryWithEncoding(NSData *document, NSString *query, NSString *encoding):&#160;XPathQuery.m'],['../_x_path_query_8m.html#a0955d09455324bebcb72f4c804b12f15',1,'PerformHTMLXPathQueryWithEncoding(NSData *document, NSString *query, NSString *encoding):&#160;XPathQuery.m']]],
+  ['performxmlxpathquery',['PerformXMLXPathQuery',['../_x_path_query_8h.html#a3a2dd70846127018a049f049e1621eda',1,'PerformXMLXPathQuery(NSData *document, NSString *query):&#160;XPathQuery.m'],['../_x_path_query_8m.html#a3a2dd70846127018a049f049e1621eda',1,'PerformXMLXPathQuery(NSData *document, NSString *query):&#160;XPathQuery.m']]],
+  ['performxmlxpathquerywithencoding',['PerformXMLXPathQueryWithEncoding',['../_x_path_query_8h.html#a9f8f81e335d8f3c3abdd131d5b5f3172',1,'PerformXMLXPathQueryWithEncoding(NSData *document, NSString *query, NSString *encoding):&#160;XPathQuery.m'],['../_x_path_query_8m.html#a9f8f81e335d8f3c3abdd131d5b5f3172',1,'PerformXMLXPathQueryWithEncoding(NSData *document, NSString *query, NSString *encoding):&#160;XPathQuery.m']]],
+  ['performxpathquery',['PerformXPathQuery',['../_x_path_query_8m.html#ae96b3b982878c5c8b16a8f565165297e',1,'XPathQuery.m']]],
+  ['plistmaindict',['plistMainDict',['../interface_saved_list_table_view_controller.html#a690c66541215851f8153757315f92dc6',1,'SavedListTableViewController']]],
+  ['plistsavesections',['plistSaveSections',['../interface_saved_list_table_view_controller.html#a15911e64ef5023fe4f278081bcb5c7db',1,'SavedListTableViewController']]]
+];

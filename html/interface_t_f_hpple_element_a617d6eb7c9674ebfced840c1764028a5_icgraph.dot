@@ -1,0 +1,13 @@
+digraph "+[TFHppleElement hppleElementWithNode:isXML:withEncoding:]"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="+[TFHppleElement hppleElement\lWithNode:isXML:withEncoding:]",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="-[TFHpple searchWithXPath\lQuery:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_t_f_hpple.html#a5c912f232c2f3b9ef5cf164227ce1016"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="-[TFHpple peekAtSearchWith\lXPathQuery:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_t_f_hpple.html#abe341e921def7fa82a96ed265ce2fd4e"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="-[TFHppleElement searchWith\lXPathQuery:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_t_f_hpple_element.html#af82deb9f4a9a92339829b9bab17ab9b9"];
+}
