@@ -141,7 +141,7 @@
  description-An alert view that asks the user to input a section title they would like to save the book under in their SavedListTable
  */
 -(void)getSection{
-    UIAlertView *insertNameAlert = [[UIAlertView alloc] initWithTitle:@"Select Saved Section" message:@"Enter a section name you would like to store these results under:" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Add", nil];
+    UIAlertView *insertNameAlert = [[UIAlertView alloc] initWithTitle:@"Save Results" message:@"To organize your saved list you may enter a section name you would like to store these results under (ex: Course Title, Book Subject/Author, Research Topic):" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Add", nil];
     insertNameAlert.alertViewStyle = UIAlertViewStylePlainTextInput;
     
     [[insertNameAlert textFieldAtIndex:0] setKeyboardType:UIKeyboardTypeAlphabet];

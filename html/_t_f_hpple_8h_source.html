@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>LibraryBooks: LibraryBooks/TFHpple.h Source File</title>
+<title>My Project: TFHpple.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,10 +23,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">LibraryBooks
-   &#160;<span id="projectnumber">1.0</span>
+   <div id="projectname">My Project
    </div>
-   <div id="projectbrief">An App to help students traverse their school library on their phones.</div>
   </td>
  </tr>
  </tbody>
@@ -63,9 +61,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -80,17 +78,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_b9764ff4b452aa86b9a4169793e0b3eb.html">LibraryBooks</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">TFHpple.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_t_f_hpple_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  TFHpple.h</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  Hpple</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
@@ -122,7 +115,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="_t_f_hpple_element_8h.html">TFHppleElement.h</a>&quot;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#import &quot;TFHppleElement.h&quot;</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
 <div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="interface_t_f_hpple.html">   35</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_t_f_hpple.html">TFHpple</a> : NSObject </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
@@ -143,15 +136,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;- (NSArray *) searchWithXPathQuery:(NSString *)xPathOrCSS;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;- (<a class="code" href="interface_t_f_hpple_element.html">TFHppleElement</a> *) peekAtSearchWithXPathQuery:(NSString *)xPathOrCSS;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="interface_t_f_hpple.html#af8002e454472111f4af37d7b48ccbade">   54</a></span>&#160;<span class="keyword">@property</span> (nonatomic, readonly) NSData * <a class="code" href="interface_t_f_hpple.html#af8002e454472111f4af37d7b48ccbade">data</a>;</div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="interface_t_f_hpple.html#a790232945cc92e254fb9788089273d1f">   55</a></span>&#160;<span class="keyword">@property</span> (nonatomic, readonly) NSString * <a class="code" href="interface_t_f_hpple.html#a790232945cc92e254fb9788089273d1f">encoding</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">@property</span> (nonatomic, readonly) NSData * data;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">@property</span> (nonatomic, readonly) NSString * encoding;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">@end</span></div>
 <div class="ttc" id="interface_t_f_hpple_html"><div class="ttname"><a href="interface_t_f_hpple.html">TFHpple</a></div><div class="ttdef"><b>Definition:</b> TFHpple.h:35</div></div>
-<div class="ttc" id="interface_t_f_hpple_html_af8002e454472111f4af37d7b48ccbade"><div class="ttname"><a href="interface_t_f_hpple.html#af8002e454472111f4af37d7b48ccbade">TFHpple::data</a></div><div class="ttdeci">NSData * data</div><div class="ttdef"><b>Definition:</b> TFHpple.h:54</div></div>
 <div class="ttc" id="interface_t_f_hpple_element_html"><div class="ttname"><a href="interface_t_f_hpple_element.html">TFHppleElement</a></div><div class="ttdef"><b>Definition:</b> TFHppleElement.h:33</div></div>
-<div class="ttc" id="interface_t_f_hpple_html_a790232945cc92e254fb9788089273d1f"><div class="ttname"><a href="interface_t_f_hpple.html#a790232945cc92e254fb9788089273d1f">TFHpple::encoding</a></div><div class="ttdeci">NSString * encoding</div><div class="ttdef"><b>Definition:</b> TFHpple.h:55</div></div>
-<div class="ttc" id="_t_f_hpple_element_8h_html"><div class="ttname"><a href="_t_f_hpple_element_8h.html">TFHppleElement.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

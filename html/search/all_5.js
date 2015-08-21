@@ -1,6 +1,10 @@
 var searchData=
 [
-  ['editionsisbns',['editionsISBNS',['../interface_search.html#a07ba636aa360e7fb218bf734464861ef',1,'Search']]],
-  ['editionsresults',['editionsResults',['../interface_search.html#a3e2691a3fe915d4c9ba857bb4d15263a',1,'Search']]],
-  ['encoding',['encoding',['../interface_t_f_hpple.html#a790232945cc92e254fb9788089273d1f',1,'TFHpple::encoding()'],['../category_t_f_hpple_07_08.html#a0b3df7514a4fe4565450e3a19f390e0a',1,'TFHpple()::encoding()'],['../category_t_f_hpple_element_07_08.html#a0a7ccc47e17245385fbaf177baad31bf',1,'TFHppleElement()::encoding()']]]
+  ['save',['Save',['../interface_save.html',1,'']]],
+  ['savedlisttableviewcontroller',['SavedListTableViewController',['../interface_saved_list_table_view_controller.html',1,'']]],
+  ['savedlisttableviewcontroller_28_29',['SavedListTableViewController()',['../category_saved_list_table_view_controller_07_08.html',1,'']]],
+  ['scanviewcontroller',['ScanViewController',['../interface_scan_view_controller.html',1,'']]],
+  ['scanviewcontroller_28_29',['ScanViewController()',['../category_scan_view_controller_07_08.html',1,'']]],
+  ['search',['Search',['../interface_search.html',1,'']]],
+  ['startnotifier',['startNotifier',['../interface_reachability.html#ae20732960a222681fcc7caeb191158bc',1,'Reachability']]]
 ];

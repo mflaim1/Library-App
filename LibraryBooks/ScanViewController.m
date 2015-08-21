@@ -35,9 +35,10 @@
     self.searcher=[[Search alloc]init];
     self.results=[[NSMutableArray alloc]init];
     self.navigationItem.title=@"Scan Book Barcode";
-    [self setColors];
+    
     
 }
+
 -(void)setColors{
     UIColor *blue=[UIColor colorWithRed:((float)((0x360000 & 0xFF0000) >> 16))/255.0 \
     green:((float)((0x009800 & 0x00FF00) >>  8))/255.0 \
@@ -61,6 +62,7 @@
  description-when the view appears,scanner is set up so a barcode can be located and scanned
  */
 - (void)viewDidAppear:(BOOL)animated {
+    [self setColors];
     [super viewDidAppear:animated];
     _highlightView = [[UIView alloc] init];
     _highlightView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleBottomMargin;
@@ -104,11 +106,11 @@
     
     [self.view bringSubviewToFront:_highlightView];
     [self.view bringSubviewToFront:_label];
-    if (UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation))
+    /*if (UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation))
     {
         [self viewDidLoad];
         [self viewDidAppear:YES];
-    }
+    }*/
     
 }
 /*
@@ -135,6 +137,7 @@
                 break;
             }
         }
+        NSLog(@"%@",detectionString);
         if (detectionString != nil)
         {
             _label.text = detectionString;
@@ -144,38 +147,46 @@
         else{
             _label.text = @"(none)";
             [_session stopRunning];
+            break;
         }
     }
     
     _highlightView.frame = highlightViewRect;
-    
+   
     //search for isbn just grabbed from barcode
     if ([self.searcher checkConnection]== NotReachable) {
         [self failSearchAlert:@"There is no internet connection"];
+    }if([_label.text isEqual:@"(none)"]){
+        [self failSearchAlert:@"Barcode could not be read. Please try again and be sure to hold your camera steady"];
+        [_session startRunning];
     }else{
-        [NSThread detachNewThreadSelector: @selector(showActivity) toTarget:self withObject:nil];
+        NSLog(@"1");
         [self startSearch:_label.text];
+            
     }
     
 }
 -(void)failSearchAlert:(NSString*) errorMessage{
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oh No!" message:errorMessage delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:errorMessage delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     [alert show];
     
 }
 -(void)startSearch:(NSString*)isbn{
+    NSLog(@"2");
     self.searcher.query=isbn;
     self.searcher.queryType=@"isbn";
     [self.searcher search];
     self.results=self.searcher.results;
     if(self.searcher.didConnect==YES){
         if([self.results count]>0){
-           
+            NSLog(@"3");
             [self performSegueWithIdentifier:@"scanResults" sender:self];
         }else{
+            NSLog(@"4");
             [self startSimSearch];
         }
     }else{
+        NSLog(@"5");
         [self slowConnection];
     }
     
@@ -185,7 +196,9 @@
  params-none
  description-Search class functions are called to find similair editions or books with common subjects to an isbn query. View seques to ResultTableView when done.
  */
+
 -(void)startSimSearch{
+    NSLog(@"6");
     [self.searcher findEditions];
     [self.results addObjectsFromArray:self.searcher.editionsResults];
     
@@ -209,23 +222,7 @@
     
     [self failSearchAlert:@"Connection is too slow. Results could not be obtained"];
 }
-/*
- function-showActivity
- params-none
- description-activity indicator loads on view
- */
 
--(void)showActivity{
-    self.searchIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
-    self.searchIndicator.alpha = 1.0;
-    self.searchIndicator.center = CGPointMake(160, 360);
-    self.searchIndicator.hidesWhenStopped = NO;
-    [_highlightView addSubview:self.searchIndicator];
-        [self.searchIndicator startAnimating];
-    self.searchIndicator.hidden=NO;
-    [self.searchIndicator startAnimating];
-    
-}
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     self.searchIndicator.hidden=YES;

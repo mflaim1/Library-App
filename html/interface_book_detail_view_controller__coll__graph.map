@@ -1,0 +1,5 @@
+<map id="BookDetailViewController" name="BookDetailViewController">
+<area shape="rect" id="node3" href="$interface_search.html" title="Search" alt="" coords="160,171,223,197"/>
+<area shape="rect" id="node7" href="$interface_save.html" title="Save" alt="" coords="253,259,304,285"/>
+<area shape="rect" id="node6" href="$interface_result.html" title="Result" alt="" coords="304,83,363,109"/>
+</map>
