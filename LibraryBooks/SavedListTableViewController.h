@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "Search.h"
 #import "Save.h"
+#import "BookDetailViewController.h"
+#import "UIColor+LibraryColors.h"
+
 @interface SavedListTableViewController : UITableViewController
 @property (strong,nonatomic) NSString* savedBooksPath;
 @property (strong,nonatomic) NSDictionary* plistMainDict;

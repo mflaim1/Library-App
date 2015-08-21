@@ -10,6 +10,9 @@
 #import "Save.h"
 #import "Result.h"
 #import "Search.h"
+#import "UIColor+LibraryColors.h"
+#import "webViewController.h"
+
 @interface BookDetailViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *bookImageView;
 @property (weak, nonatomic) IBOutlet UILabel *bookTitle;

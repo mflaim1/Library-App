@@ -10,6 +10,9 @@
 #import "Result.h"
 #import "Search.h"
 #import "Save.h"
+#import "BookDetailViewController.h"
+#import "UIColor+LibraryColors.h"
+
 @interface ResultTableViewController : UITableViewController
 @property (strong) UIView *activityView;
 @property (strong, nonatomic) UIAlertView *insertNameAlert;

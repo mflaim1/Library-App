@@ -7,10 +7,7 @@
 //
 
 #import "Search.h"
-#import "TFHpple.h"
-#import "Reachability.h"
-NSString* noCover=@"http://jonathanwoodauthor.com/wp-content/uploads/2013/10/noCoverArt.gif";
-NSString* cd=@"http://www.clker.com/cliparts/D/O/1/I/0/8/cd-icon-md.png";
+
 @implementation Search
 /*
  function- checkConnection
@@ -102,13 +99,13 @@ NSString* cd=@"http://www.clker.com/cliparts/D/O/1/I/0/8/cd-icon-md.png";
     NSMutableArray *returnValues=[[NSMutableArray alloc]init];
     //this means we do not have a book, but a cd or dvd, therefore it should not be searched for in google books
     if([@"Multimedia Services"isEqual:location]||[@"Technical Services" isEqual:location]){
-        [returnValues addObject:cd];
+        [returnValues addObject:@"cd"];
         [returnValues addObject:@"No description found"];
         return returnValues;
         
     }else if([isbn isEqual:@"No ISBN Found"]||[callNumber isEqual:@"No Call Number Found"]||[callNumber isEqual:@"Electronic book"]){
 
-        [returnValues addObject:noCover];
+        [returnValues addObject:@"no cover"];
         [returnValues addObject:@"No description found"];
         return returnValues;
         //this means the book can be searched with google books api
@@ -123,7 +120,7 @@ NSString* cd=@"http://www.clker.com/cliparts/D/O/1/I/0/8/cd-icon-md.png";
  function-accessGoogleAPI
  params-NSString isbn
  return-NSDictionary, json googleAPI result
- description-searches the google book api for an isbn and return results
+ description-searches the GOOGLE BOOKS API for an isbn and return results
  */
 -(NSDictionary*)accessGoogleAPI:(NSString*)isbn{
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
@@ -163,20 +160,19 @@ NSString* cd=@"http://www.clker.com/cliparts/D/O/1/I/0/8/cd-icon-md.png";
             
         }else{
             //if reaches else then result was not the correct book
-            self.imageURL=noCover;
+            self.imageURL=@"no cover";
             self.bookDesc=@"No Description Found";
             
         }
     }else{
         //this will be if google search came up with no results
-        self.imageURL=noCover;
+        self.imageURL=@"no cover";
         self.bookDesc=@"No Description Found";
-        NSLog(@"%@",self.imageURL);
     }
     //this will be true if the google search result did not have a picture
     if(!self.imageURL){
 
-        self.imageURL=noCover;
+        self.imageURL=@"no cover";
     }
     if(!self.bookDesc){
         self.bookDesc=@"No Description Found";
@@ -189,7 +185,7 @@ NSString* cd=@"http://www.clker.com/cliparts/D/O/1/I/0/8/cd-icon-md.png";
 /*
  function-findSubjects
  params-NSString isbn
- description-this searches for a book with a library of congress api to get its subjects. It then searches for each subject in the library database and adds the results to a list
+ description-this searches for a book with a LIBRARY OF CONGRESS API to get its subjects. It then searches for each subject in the library database and adds the results to a list
  */
 -(void)findSubjects:(NSString*)isbn{
     self.subjects=[[NSMutableArray alloc]init];
@@ -270,7 +266,7 @@ NSString* cd=@"http://www.clker.com/cliparts/D/O/1/I/0/8/cd-icon-md.png";
 /*
  function-findEditions
  params-none
- description-searches worldcat API for different editions of a specific book then searches for those editions in the library database and adds it to final results to seque if it is there.
+ description-searches WORLDCAT API for different editions of a specific book then searches for those editions in the library database and adds it to final results to seque if it is there.
  */
 -(void)findEditions{
     self.editionsISBNS=[[NSMutableArray alloc]init];
@@ -308,7 +304,7 @@ NSString* cd=@"http://www.clker.com/cliparts/D/O/1/I/0/8/cd-icon-md.png";
 /*
  function-search
  params-none
- description-searches the library database for a specific query and search type and then starts to parse the resulting xml
+ description-searches the ITHACA COLLEGE LIBRARY DATABASES for a specific query and search type and then starts to parse the resulting xml
  */
 -(void)search{
     self.didConnect=NO;
@@ -425,7 +421,6 @@ attributes: (NSDictionary *)attributeDict
  */
 -(void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName
 {
-    
     //Append a pointer to our currentResult instance to the results array
     if( [elementName isEqualToString:@"sear:result"])
     {   if([self.currResult.holdings integerValue]>1){
@@ -442,9 +437,6 @@ attributes: (NSDictionary *)attributeDict
         [self.results addObject:self.currResult];
 
     }
-    
-    
-    
 }
 /*
  function-splitTitle

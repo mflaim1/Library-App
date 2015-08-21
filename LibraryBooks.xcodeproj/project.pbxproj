@@ -28,6 +28,7 @@
 		E7DCECFB1B3C789F000D12A5 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DCECF71B3C789F000D12A5 /* TFHppleElement.m */; };
 		E7DCECFC1B3C789F000D12A5 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DCECF91B3C789F000D12A5 /* XPathQuery.m */; };
 		E7DCECFE1B3C79E1000D12A5 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E7DCECFD1B3C79E1000D12A5 /* libxml2.dylib */; };
+		E7F113971B879B2F00937D20 /* UIColor+LibraryColors.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F113961B879B2F00937D20 /* UIColor+LibraryColors.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,8 @@
 		E7DCECF81B3C789F000D12A5 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
 		E7DCECF91B3C789F000D12A5 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
 		E7DCECFD1B3C79E1000D12A5 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		E7F113951B879B2F00937D20 /* UIColor+LibraryColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+LibraryColors.h"; sourceTree = "<group>"; };
+		E7F113961B879B2F00937D20 /* UIColor+LibraryColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+LibraryColors.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +160,8 @@
 				E73C8D001B21E5A30086E6A8 /* savedBookDict.plist */,
 				E73C8D021B22070E0086E6A8 /* SavedListTableViewController.h */,
 				E73C8D031B22070E0086E6A8 /* SavedListTableViewController.m */,
+				E7F113951B879B2F00937D20 /* UIColor+LibraryColors.h */,
+				E7F113961B879B2F00937D20 /* UIColor+LibraryColors.m */,
 			);
 			path = LibraryBooks;
 			sourceTree = "<group>";
@@ -303,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7DCECFB1B3C789F000D12A5 /* TFHppleElement.m in Sources */,
+				E7F113971B879B2F00937D20 /* UIColor+LibraryColors.m in Sources */,
 				E7097A081B432B330062007C /* webViewController.m in Sources */,
 				E72E46A51B291AB400E7338A /* Save.m in Sources */,
 				E72E46A21B27551F00E7338A /* Search.m in Sources */,

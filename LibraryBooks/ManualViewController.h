@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
+#import "UIColor+LibraryColors.h"
+#import "ResultTableViewController.h"
 #import "Search.h"
+#import "Reachability.h"
+
 @interface ManualViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *query;
 @property (weak, nonatomic) IBOutlet UIButton *searchButton;

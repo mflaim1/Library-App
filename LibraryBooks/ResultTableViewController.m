@@ -7,7 +7,7 @@
 //
 
 #import "ResultTableViewController.h"
-#import "BookDetailViewController.h"
+
 
 @interface ResultTableViewController ()
 
@@ -26,19 +26,12 @@
     target:self action:@selector(getSection)];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     self.navigationItem.rightBarButtonItem = saveAllButton;
-    [self setColors];
+    [self.navigationController.navigationBar.layer setBorderColor:[[UIColor libraryLight] CGColor]];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
--(void) setColors{
-    UIColor *light=[UIColor colorWithRed:((float)((0xEF0000 & 0xFF0000) >> 16))/255.0 \
-    green:((float)((0x00EF00 & 0x00FF00) >>  8))/255.0 \
-    blue:((float)((0x0000EF & 0x0000FF) >>  0))/255.0 \
-                                   alpha:1.0];
-    [self.navigationController.navigationBar.layer setBorderColor:[light CGColor]];
 }
 /*
  function-getSection
@@ -163,12 +156,8 @@
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    UIColor *tan=[UIColor colorWithRed:((float)((0xE60000 & 0xFF0000) >> 16))/255.0 \
-    green:((float)((0x00E000 & 0x00FF00) >>  8))/255.0 \
-    blue:((float)((0x0000D2 & 0x0000FF) >>  0))/255.0 \
-                                 alpha:1.0];
     UIView *wrapper = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 150)];
-    [wrapper setBackgroundColor:tan];
+    [wrapper setBackgroundColor:[UIColor libraryTan]];
     
     UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 20)];
     [textLabel setFont:[UIFont systemFontOfSize:11]];

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Search.h"
+#import "UIColor+LibraryColors.h"
 @interface ScanViewController : UIViewController
 @property (strong) NSMutableArray* results;
 @property (strong) UIActivityIndicatorView *searchIndicator;

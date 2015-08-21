@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Search.h"
-
+#import "Result.h"
 @interface Save : NSObject
 @property Search* searcher;
 -(BOOL)saveItems:(NSString*)sectionName :(NSArray*) results :(NSString*) filePath;

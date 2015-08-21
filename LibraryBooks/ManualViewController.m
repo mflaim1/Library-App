@@ -7,9 +7,7 @@
 //
 
 #import "ManualViewController.h"
-#import "ResultTableViewController.h"
-#import "Search.h"
-#import "Reachability.h"
+
 
 @implementation ManualViewController
 @synthesize typeSelected,noneFoundLabel;
@@ -38,27 +36,15 @@
     [self setColors];
 }
 -(void)setColors{
-    UIColor *blue=[UIColor colorWithRed:((float)((0x360000 & 0xFF0000) >> 16))/255.0 \
-        green:((float)((0x009800 & 0x00FF00) >>  8))/255.0 \
-        blue:((float)((0x0000BF & 0x0000FF) >>  0))/255.0 \
-                                  alpha:1.0];
-    UIColor *tan=[UIColor colorWithRed:((float)((0xE60000 & 0xFF0000) >> 16))/255.0 \
-    green:((float)((0x00E000 & 0x00FF00) >>  8))/255.0 \
-    blue:((float)((0x0000D2 & 0x0000FF) >>  0))/255.0 \
-                                  alpha:1.0];
-    UIColor *light=[UIColor colorWithRed:((float)((0xEF0000 & 0xFF0000) >> 16))/255.0 \
-    green:((float)((0x00EF00 & 0x00FF00) >>  8))/255.0 \
-    blue:((float)((0x0000EF & 0x0000FF) >>  0))/255.0 \
-    alpha:1.0];
-    self.navigationController.navigationBar.barTintColor = light;
-    self.view.backgroundColor=tan;
+    self.navigationController.navigationBar.barTintColor = [UIColor libraryLight];
+    self.view.backgroundColor=[UIColor libraryTan];
     self.searchButton.layer.borderWidth = 1.0f;
-    self.searchButton.layer.borderColor =blue.CGColor;
+    self.searchButton.layer.borderColor =[UIColor libraryBlue].CGColor;
     self.searchButton.layer.cornerRadius = 4.0f;
     
     [self.navigationController.navigationBar.layer setBorderWidth:2.0];// Just to make sure its working
-    [self.navigationController.navigationBar.layer setBorderColor:[blue CGColor]];
-    [self.tabBarController.tabBar setBarTintColor:light];
+    [self.navigationController.navigationBar.layer setBorderColor:[[UIColor libraryBlue] CGColor]];
+    [self.tabBarController.tabBar setBarTintColor:[UIColor libraryLight]];
     
 }
 - (void)didReceiveMemoryWarning {

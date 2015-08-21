@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -11,13 +10,13 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Copyright (c) 2015 Mariah Flaim. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="8ie-xW-0ye">
-                    <rect key="frame" x="118" y="451" width="244" height="21"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Copyright (c) 2015 Mariah Flaim. All rights reserved." textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="8ie-xW-0ye">
+                    <rect key="frame" x="8" y="430" width="464" height="50"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="244" id="pPU-O5-kzC"/>
+                        <constraint firstAttribute="height" constant="50" id="tsq-Xb-nFH"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                    <color key="textColor" red="0.16862745583057404" green="0.60000002384185791" blue="0.73725491762161255" alpha="1" colorSpace="deviceRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iclibAirVentSingleUnit" translatesAutoresizingMaskIntoConstraints="NO" id="5I8-mY-Toi">
@@ -27,25 +26,27 @@
                         <constraint firstAttribute="width" constant="47" id="Utn-NS-ByP"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LibraryBooks" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
-                    <rect key="frame" x="128" y="218" width="225" height="43"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ICLibraryBooks" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
+                    <rect key="frame" x="128" y="224" width="225" height="43"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="43" id="Mww-ZD-QLL"/>
-                        <constraint firstAttribute="width" constant="225" id="lBC-je-Etr"/>
+                        <constraint firstAttribute="height" constant="43" id="Tdw-oa-k2b"/>
+                        <constraint firstAttribute="width" constant="225" id="d8y-T0-ctC"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="0.16862745583057404" green="0.60000002384185791" blue="0.73725491762161255" alpha="1" colorSpace="deviceRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="0.16862745583057404" green="0.60000002384185791" blue="0.73725491762161255" alpha="1" colorSpace="deviceRGB"/>
+            <color key="backgroundColor" red="0.90196084976196289" green="0.87843143939971924" blue="0.82745105028152466" alpha="1" colorSpace="deviceRGB"/>
             <constraints>
-                <constraint firstItem="8ie-xW-0ye" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="3Mo-XG-Jcl"/>
-                <constraint firstItem="8ie-xW-0ye" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottomMargin" id="94j-Rs-xzr"/>
+                <constraint firstItem="kId-c2-rCX" firstAttribute="centerX" secondItem="5I8-mY-Toi" secondAttribute="centerX" id="3At-SV-GoK"/>
+                <constraint firstAttribute="bottom" secondItem="8ie-xW-0ye" secondAttribute="bottom" id="5pk-b6-RaW"/>
                 <constraint firstItem="5I8-mY-Toi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="176" id="Qe6-a3-yZe"/>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="centerX" secondItem="5I8-mY-Toi" secondAttribute="centerX" id="Qwt-eY-MnP"/>
-                <constraint firstItem="5I8-mY-Toi" firstAttribute="centerX" secondItem="8ie-xW-0ye" secondAttribute="centerX" id="k3j-lC-Jc4"/>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="top" secondItem="5I8-mY-Toi" secondAttribute="bottom" constant="2" id="ymA-zk-Veo"/>
+                <constraint firstItem="kId-c2-rCX" firstAttribute="top" secondItem="5I8-mY-Toi" secondAttribute="bottom" constant="8" symbolic="YES" id="WaZ-5S-4CK"/>
+                <constraint firstItem="8ie-xW-0ye" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="XRP-1X-12a"/>
+                <constraint firstItem="kId-c2-rCX" firstAttribute="centerX" secondItem="8ie-xW-0ye" secondAttribute="centerX" id="cZV-og-rG5"/>
+                <constraint firstAttribute="trailing" secondItem="8ie-xW-0ye" secondAttribute="trailing" constant="8" id="i2d-YB-bcG"/>
+                <constraint firstAttribute="centerX" secondItem="8ie-xW-0ye" secondAttribute="centerX" id="zPJ-eW-hMB"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

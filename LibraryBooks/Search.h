@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "Result.h"
 #import "Reachability.h"
+#import "TFHpple.h"
+
 @interface Search : NSObject<NSXMLParserDelegate>
 @property (strong) NSString* query;
 @property (strong) NSString* queryType;

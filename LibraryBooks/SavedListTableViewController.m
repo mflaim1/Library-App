@@ -7,7 +7,7 @@
 //
 
 #import "SavedListTableViewController.h"
-#import "BookDetailViewController.h"
+
 @interface SavedListTableViewController ()
 
 @end
@@ -16,7 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setColors];
+    self.navigationController.navigationBar.barTintColor = [UIColor libraryLight];
+
 }
 -(void)viewDidAppear:(BOOL)animated {
     self.saver=[[Save alloc]init];
@@ -37,13 +38,7 @@
     }
     
 }
--(void)setColors{
-    UIColor *light=[UIColor colorWithRed:((float)((0xEF0000 & 0xFF0000) >> 16))/255.0 \
-                                   green:((float)((0x00EF00 & 0x00FF00) >>  8))/255.0 \
-                                    blue:((float)((0x0000EF & 0x0000FF) >>  0))/255.0 \
-                                   alpha:1.0];
-    self.navigationController.navigationBar.barTintColor = light;
-}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -108,13 +103,9 @@
 }
 - (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section
 {
-    UIColor *tan=[UIColor colorWithRed:((float)((0xE60000 & 0xFF0000) >> 16))/255.0 \
-    green:((float)((0x00E000 & 0x00FF00) >>  8))/255.0 \
-    blue:((float)((0x0000D2 & 0x0000FF) >>  0))/255.0 \
-                                 alpha:1.0];
     UITableViewHeaderFooterView *header = (UITableViewHeaderFooterView *)view;
     header.textLabel.font=[UIFont systemFontOfSize:(11)];    
-    view.tintColor = tan;
+    view.tintColor = [UIColor libraryTan];
     
 }
 -(CGFloat)heightForText:(NSString *)str width:(int)width font:(UIFont *)font lineBreakMode:(NSLineBreakMode) lineBreakMode

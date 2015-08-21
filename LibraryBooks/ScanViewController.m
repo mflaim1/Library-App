@@ -40,21 +40,12 @@
 }
 
 -(void)setColors{
-    UIColor *blue=[UIColor colorWithRed:((float)((0x360000 & 0xFF0000) >> 16))/255.0 \
-    green:((float)((0x009800 & 0x00FF00) >>  8))/255.0 \
-    blue:((float)((0x0000BF & 0x0000FF) >>  0))/255.0 \
-                                  alpha:1.0];
-    UIColor *light=[UIColor colorWithRed:((float)((0xEF0000 & 0xFF0000) >> 16))/255.0 \
-    green:((float)((0x00EF00 & 0x00FF00) >>  8))/255.0 \
-    blue:((float)((0x0000EF & 0x0000FF) >>  0))/255.0 \
-                                   alpha:1.0];
-    self.navigationController.navigationBar.barTintColor = light;
+    self.navigationController.navigationBar.barTintColor = [UIColor libraryLight];
 
     [self.navigationController.navigationBar.layer setBorderWidth:2.0];// Just to make sure its working
-    [self.navigationController.navigationBar.layer setBorderColor:[blue CGColor]];
+    [self.navigationController.navigationBar.layer setBorderColor:[[UIColor libraryBlue] CGColor]];
     
 }
-
 
 /*
  function-viewDidAppear
@@ -86,10 +77,7 @@
     _input = [AVCaptureDeviceInput deviceInputWithDevice:_device error:&error];
     if (_input) {
         [_session addInput:_input];
-    } else {
-        NSLog(@"Error: %@", error);
     }
-    
     _output = [[AVCaptureMetadataOutput alloc] init];
     [_output setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
     [_session addOutput:_output];
@@ -106,17 +94,12 @@
     
     [self.view bringSubviewToFront:_highlightView];
     [self.view bringSubviewToFront:_label];
-    /*if (UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation))
-    {
-        [self viewDidLoad];
-        [self viewDidAppear:YES];
-    }*/
     
 }
 /*
  function-captureOutput
  params-AVCaptureOutput, NSArray, AVCaptureConnection
- description-sets up camera so it can detect a lto fo different types of barcodes and grab the information from them
+ description-sets up camera so it can detect different types of barcodes and grab the information from them
  */
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection
 {
@@ -137,7 +120,7 @@
                 break;
             }
         }
-        NSLog(@"%@",detectionString);
+        
         if (detectionString != nil)
         {
             _label.text = detectionString;
@@ -160,7 +143,6 @@
         [self failSearchAlert:@"Barcode could not be read. Please try again and be sure to hold your camera steady"];
         [_session startRunning];
     }else{
-        NSLog(@"1");
         [self startSearch:_label.text];
             
     }
@@ -172,21 +154,17 @@
     
 }
 -(void)startSearch:(NSString*)isbn{
-    NSLog(@"2");
     self.searcher.query=isbn;
     self.searcher.queryType=@"isbn";
     [self.searcher search];
     self.results=self.searcher.results;
     if(self.searcher.didConnect==YES){
         if([self.results count]>0){
-            NSLog(@"3");
             [self performSegueWithIdentifier:@"scanResults" sender:self];
         }else{
-            NSLog(@"4");
             [self startSimSearch];
         }
     }else{
-        NSLog(@"5");
         [self slowConnection];
     }
     
@@ -198,7 +176,6 @@
  */
 
 -(void)startSimSearch{
-    NSLog(@"6");
     [self.searcher findEditions];
     [self.results addObjectsFromArray:self.searcher.editionsResults];
     

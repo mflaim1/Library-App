@@ -7,7 +7,7 @@
 //
 
 #import "BookDetailViewController.h"
-#import "webViewController.h"
+
 @interface BookDetailViewController ()
 
 @end
@@ -20,7 +20,7 @@
     // Do any additional setup after loading the view.
     self.bookTitle.text=self.book.fullTitle;
     [self.callNum setTitle: self.book.callNumber forState: UIControlStateNormal];
-    [self setColors];
+    [self.navigationController.navigationBar.layer setBorderColor:[[UIColor libraryLight] CGColor]];
     [self setUpPage];
     [self startStatusQueue];
     
@@ -29,13 +29,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
--(void) setColors{
-    UIColor *light=[UIColor colorWithRed:((float)((0xEF0000 & 0xFF0000) >> 16))/255.0 \
-                                   green:((float)((0x00EF00 & 0x00FF00) >>  8))/255.0 \
-                                    blue:((float)((0x0000EF & 0x0000FF) >>  0))/255.0 \
-                                   alpha:1.0];
-    [self.navigationController.navigationBar.layer setBorderColor:[light CGColor]];
-}
+
 
 /*
  function-startStatusQueue
@@ -106,13 +100,22 @@
     if(!self.book.imageURL||!self.book.desc){
         
         result=[self.searcher getImageAndDesc:self.book.isbn:self.book.location:self.book.callNumber:self.book.title];
+        
         self.book.imageURL=result[0];
+        
         self.book.desc=result[1];
     }
+    UIImage *theImage=[[UIImage alloc]init];
+    if([self.book.imageURL isEqual: @"cd"]){
+        theImage=[UIImage imageNamed:@"cd"];
+    }else if([self.book.imageURL isEqual:@"no cover"]){
+        theImage=[UIImage imageNamed:@"noCoverArt"];
+    }else{
+        NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: self.book.imageURL]];
+        theImage=[UIImage imageWithData:imageData];
+    }
     
-    NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: self.book.imageURL]];
-    
-    return [UIImage imageWithData: imageData];
+    return theImage;
 }
 /*
  function-setUpPage
