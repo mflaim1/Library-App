@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A1565501C337F7700D4684E /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A15654F1C337F7700D4684E /* Images-2.xcassets */; settings = {ASSET_TAGS = (); }; };
 		E7097A081B432B330062007C /* webViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7097A071B432B330062007C /* webViewController.m */; };
 		E72E46A21B27551F00E7338A /* Search.m in Sources */ = {isa = PBXBuildFile; fileRef = E72E46A11B27551F00E7338A /* Search.m */; };
 		E72E46A51B291AB400E7338A /* Save.m in Sources */ = {isa = PBXBuildFile; fileRef = E72E46A41B291AB400E7338A /* Save.m */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6A15654F1C337F7700D4684E /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
 		E7097A061B432B330062007C /* webViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = webViewController.h; sourceTree = "<group>"; };
 		E7097A071B432B330062007C /* webViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = webViewController.m; sourceTree = "<group>"; };
 		E72E46A01B27551F00E7338A /* Search.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Search.h; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				E73C8D031B22070E0086E6A8 /* SavedListTableViewController.m */,
 				E7F113951B879B2F00937D20 /* UIColor+LibraryColors.h */,
 				E7F113961B879B2F00937D20 /* UIColor+LibraryColors.m */,
+				6A15654F1C337F7700D4684E /* Images-2.xcassets */,
 			);
 			path = LibraryBooks;
 			sourceTree = "<group>";
@@ -249,7 +252,7 @@
 		E781FCD11B1CDCCF00020DD3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Mariah Flaim";
 				TargetAttributes = {
 					E781FCD81B1CDCD000020DD3 = {
@@ -289,6 +292,7 @@
 				E73C8D011B21E5A30086E6A8 /* savedBookDict.plist in Resources */,
 				E781FCEB1B1CDCD000020DD3 /* Main.storyboard in Resources */,
 				E781FCF01B1CDCD000020DD3 /* LaunchScreen.xib in Resources */,
+				6A1565501C337F7700D4684E /* Images-2.xcassets in Resources */,
 				E781FCED1B1CDCD000020DD3 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,6 +389,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -405,7 +410,7 @@
 					"$(SDKROOT)/usr/include/libxml2",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -447,7 +452,7 @@
 					"$(SDKROOT)/usr/include/libxml2",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -468,6 +473,7 @@
 				INFOPLIST_FILE = LibraryBooks/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.ithaca.cs.LibraryBooks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -488,6 +494,7 @@
 				INFOPLIST_FILE = LibraryBooks/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.ithaca.cs.LibraryBooks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -508,6 +515,7 @@
 				);
 				INFOPLIST_FILE = LibraryBooksTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "kk.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LibraryBooks.app/LibraryBooks";
 			};
@@ -523,6 +531,7 @@
 				);
 				INFOPLIST_FILE = LibraryBooksTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "kk.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LibraryBooks.app/LibraryBooks";
 			};
